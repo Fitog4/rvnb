@@ -1,0 +1,28 @@
+a.btn-red {
+  color: #EFE9E7;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #D34C50;
+  transition: background 0.3s ease;
+}
+
+a.btn-red:hover {
+  background: #F4585D;
+  color: white;
+  text-decoration: none;
+}
+
+a.btn-blue {
+  color: #EFE9E7;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #447EC4;
+  transition: background 0.3s ease;
+}
+
+a.btn-blue:hover {
+  background: #5195E8;
+  color: white;
+  text-decoration: none;
+}
+

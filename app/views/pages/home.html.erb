@@ -2,5 +2,13 @@
   <div class="container">
     <h1>Are you ready for your next trip?</h1>
     <p>Find the perfect RV</p>
+
+  <%= simple_form_for(@rv, method: :get) do |f| %>
+  <%= f.input :available_in %>
+  <%= f.input :available_from, as: :date %>
+  <%= f.input :available_till, as: :date %>
+  <%= f.submit 'Find RVs', class: "btn" %>
+  <% end %>
   </div>
 </div>
+

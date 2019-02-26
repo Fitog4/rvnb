@@ -14,7 +14,7 @@ class BookingRequest < ApplicationRecord
       errors.add(:date_till, 'Booking end date must be after booking start date')
     end
     unless date_from >= Date.today
-      errors.add(:date_from, 'Booking start date must today or in the future')
+      errors.add(:date_from, 'Booking start date must be today or in the future')
     end
   end
 end

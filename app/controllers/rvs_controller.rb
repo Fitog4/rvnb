@@ -21,7 +21,5 @@ class RvsController < ApplicationController
     params.require(:rv).permit(:available_in, :available_from, :available_till)
   end
 
-  def search
-  end
 end
 # {"utf8"=>"✓", "rv"=>{"available_in"=>"Europe", "available_from"=>"2019-02-01", "available_till"=>"2019-02-16"}, "commit"=>"Search"}

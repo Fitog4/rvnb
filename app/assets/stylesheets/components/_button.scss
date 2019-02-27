@@ -8,7 +8,7 @@ a.btn-red {
 
 a.btn-red:hover {
   background: #F4585D;
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -25,4 +25,11 @@ a.btn-blue:hover {
   color: white;
   text-decoration: none;
 }
+
+a.btn-blue:active {
+  background: #5195E8;
+  color: white;
+  text-decoration: none;
+}
+
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_26_150726) do
+ActiveRecord::Schema.define(version: 2019_02_27_113201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2019_02_26_150726) do
     t.string "available_in"
     t.datetime "available_from"
     t.datetime "available_till"
+    t.integer "price_per_night"
+    t.string "model"
     t.index ["user_id"], name: "index_rvs_on_user_id"
   end
 

@@ -26,7 +26,7 @@ puts 'Finished!'
 puts 'Creating 100 fake RVs...'
 100.times do
   rv = Rv.new(
-    category: ['Motorhome', 'Toterhome', 'Diesel Pusher', 'Travel Trailer', 'Expandable Travel Trailer', '5th Wheel RV', 'Toy Hauler' 'Camper', 'Vans', 'Teardrop Trailer', 'Horse Trailer', 'Ice Fishing RV
+    category: ['Motorhome', 'Toterhome', 'Diesel Pusher', 'Travel Trailer', 'Expandable Travel Trailer', '5th Wheel RV', 'Toy Hauler' 'Camper', 'Van', 'Teardrop Trailer', 'Horse Trailer', 'Ice Fishing RV
 ', 'Winnebago'].sample,
     user: User.all.sample,
     travelling_seats: rand(2..8),

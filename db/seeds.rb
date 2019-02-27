@@ -26,14 +26,16 @@ puts 'Finished!'
 puts 'Creating 100 fake RVs...'
 100.times do
   rv = Rv.new(
-    category: ['Motorhome', 'Toterhome', 'Diesel Pusher', 'Travel Trailer', 'Expandable Travel Trailer', '5th Wheel RV', 'Toy Hauler' 'Camper', 'Vans', 'Teardrop Trailer', 'Horse Trailer', 'Ice Fishing RV
+    category: ['Motorhome', 'Toterhome', 'Diesel Pusher', 'Travel Trailer', 'Expandable Travel Trailer', '5th Wheel RV', 'Toy Hauler' 'Camper', 'Van', 'Teardrop Trailer', 'Horse Trailer', 'Ice Fishing RV
 ', 'Winnebago'].sample,
     user: User.all.sample,
     travelling_seats: rand(2..8),
     beds: rand(2..8),
-    available_in: Faker::Address.full_address,
+    available_in: ['Europe', 'Asia', 'North America', 'Latin America', 'Australia', 'Africa'].sample,
     available_from: Faker::Date.between('2019-03-01', '2019-05-01'),
-    available_till: Faker::Date.between('2019-05-01', '2019-12-01')
+    available_till: Faker::Date.between('2019-05-01', '2019-12-01'),
+    price_per_night: rand(35..200),
+    model: Faker::Vehicle.model
   )
   rv.save!
 end
@@ -43,7 +45,7 @@ puts 'Creating 100 fake booking requests...'
 100.times do
   booking_request = BookingRequest.new(
     status: ['pending', 'approved', 'paid'].sample,
-    location: Faker::Address.full_address,
+    location: ['Europe', 'Asia', 'North America', 'Latin America', 'Australia', 'Africa'].sample,
     date_from: Faker::Date.between('2019-03-01', '2019-05-01'),
     date_till: Faker::Date.between('2019-05-01', '2019-12-01'),
     user: User.all.sample,

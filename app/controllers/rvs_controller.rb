@@ -1,5 +1,6 @@
 class RvsController < ApplicationController
   def show
+    @rv = Rv.find(params[:id])
   end
 
   def new

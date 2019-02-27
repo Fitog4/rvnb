@@ -7,5 +7,10 @@ class RvsController < ApplicationController
   end
 
   def create
+    raise
+  end
+
+  def search
+    raise
   end
 end

@@ -11,6 +11,6 @@ class RvsController < ApplicationController
   end
 
   def search
-    raise
+    @rvs = Rv.where(available_in: )
   end
 end

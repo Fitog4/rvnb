@@ -4,11 +4,19 @@ a.btn-red {
   border-radius: 4px;
   background: #D34C50;
   transition: background 0.3s ease;
+  text-decoration: none;
+
 }
 
 a.btn-red:hover {
   background: #F4585D;
-  color: black;
+  color: #EFE9E7;
+  text-decoration: none;
+}
+
+a.btn-red:active {
+  background: #F4585D;
+  color: #EFE9E7;
   text-decoration: none;
 }
 
@@ -18,17 +26,18 @@ a.btn-blue {
   border-radius: 4px;
   background: #447EC4;
   transition: background 0.3s ease;
+  text-decoration: none;
 }
 
 a.btn-blue:hover {
   background: #5195E8;
-  color: white;
+  color: #EFE9E7;
   text-decoration: none;
 }
 
 a.btn-blue:active {
   background: #5195E8;
-  color: white;
+  color: #EFE9E7;
   text-decoration: none;
 }
 

@@ -10,40 +10,21 @@
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
 <body>
-  <div class="navbar navbar-transparent">
-    <a class="left" href="#">
-      <img src="https://files.slack.com/files-pri/T02NE0241-FGH0UDCQK/f4a4b57a-e4c2-4632-ab85-f9828f79e1a0.png" width="70" height="70" alt="rvnb_logo">
-    </a>
-    <div class="right">
-      <a href="#">Help</a>
-      <a href="#">Sign up</a>
-      <a href="#">Sign in</a>
-      <a href="#">Your RV</a>
-    </div>
-</div>
-
-<% if notice %>
-  <p class="notice" ><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert"><%= alert %></p>
-<% end %>
-  <%= yield %>
-  <%= javascript_include_tag 'application' %>
-  <%= javascript_pack_tag 'application' %>
-
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="footer-copyright">
-      Created with <i class="fas fa-heart"></i> at Le Wagon
-    </div>
+  <% if current_page?(controller:"pages", action: "home") %>
+  <%= render "shared/navbar" %>
+  <% else   %>
+  <div class='content-body-with-margin'>
+    <%= render 'shared/navbar' %>
   </div>
+  <% end  %>
+
+  <%= render "shared/flashes" %>
+
+    <%= yield %>
+
+    <%= render "shared/footer" %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
 
 </body>
 </html>

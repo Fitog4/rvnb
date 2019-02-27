@@ -10,10 +10,11 @@
 @import "font-awesome";
 
 // Your CSS partials
-@import "layouts/index";
-@import "components/index";
-@import "pages/index";
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'bootstrap-datetimepicker';
+
+@import "layouts/index";
+@import "components/index";
+@import "pages/index";

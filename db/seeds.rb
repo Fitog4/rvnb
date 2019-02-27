@@ -31,7 +31,7 @@ puts 'Creating 100 fake RVs...'
     user: User.all.sample,
     travelling_seats: rand(2..8),
     beds: rand(2..8),
-    available_in: Faker::Address.full_address,
+    available_in: Faker::Address.city,
     available_from: Faker::Date.between('2019-03-01', '2019-05-01'),
     available_till: Faker::Date.between('2019-05-01', '2019-12-01')
   )
@@ -43,7 +43,7 @@ puts 'Creating 100 fake booking requests...'
 100.times do
   booking_request = BookingRequest.new(
     status: ['pending', 'approved', 'paid'].sample,
-    location: Faker::Address.full_address,
+    location: Faker::Address.city,
     date_from: Faker::Date.between('2019-03-01', '2019-05-01'),
     date_till: Faker::Date.between('2019-05-01', '2019-12-01'),
     user: User.all.sample,

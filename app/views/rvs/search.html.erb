@@ -1,7 +1,15 @@
-<ul>
-<% @rvs.each do |rv| %>
-<li><%= rv.category %>
-  <%= rv.available_till %>
-</li>
-<% end %>
-</ul>
+<div class="container">
+  <% @rvs.each do |rv| %>
+    <div class="card-trip">
+      <img src="https://images.unsplash.com/photo-1520101244246-293f77ffc39e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80">
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= rv.category%> by <%=rv.user.name %></h2>
+          <p>Description of the RV</p>
+        </div>
+        <h2 class="card-trip-pricing"> <%= rv.price_per_night %>€ per night</h2>
+        <a class="btn-card" href="#">Book now</a>
+      </div>
+    </div>
+  <% end %>
+</div>

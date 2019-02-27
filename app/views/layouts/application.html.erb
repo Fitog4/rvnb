@@ -11,20 +11,19 @@
 </head>
 <body>
   <% if current_page?(controller:"pages", action: "home") %>
-  <%= render "shared/navbar" %>
+    <%= render "shared/navbar" %>
   <% else   %>
-  <div class='content-body-with-margin'>
-    <%= render 'shared/navbar' %>
-  </div>
+    <div class='content-body-with-margin'>
+      <%= render 'shared/navbar' %>
+    </div>
   <% end  %>
 
   <%= render "shared/flashes" %>
+  <%= yield %>
 
-    <%= yield %>
-
-    <%= render "shared/footer" %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+  <%= render "shared/footer" %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_pack_tag 'application' %>
 
 </body>
 </html>

@@ -33,7 +33,9 @@ puts 'Creating 100 fake RVs...'
     beds: rand(2..8),
     available_in: Faker::Address.full_address,
     available_from: Faker::Date.between('2019-03-01', '2019-05-01'),
-    available_till: Faker::Date.between('2019-05-01', '2019-12-01')
+    available_till: Faker::Date.between('2019-05-01', '2019-12-01'),
+    price_per_night: rand(35..200),
+    model: Faker::Vehicle.model
   )
   rv.save!
 end

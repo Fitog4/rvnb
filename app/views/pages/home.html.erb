@@ -3,49 +3,15 @@
     <h1>Are you ready for your next trip?</h1>
     <p>Find the perfect RV</p>
 
-  <%= simple_form_for(@rv, method: :get) do |f| %>
-  <%= f.input :available_in %>
-  <%= f.input :available_from, as: :date %>
-  <%= f.input :available_till, as: :date %>
-  <%= f.submit 'Find RVs', class: "btn" %>
+  <%= form_tag("/rvs", method: "get") do %>
+    <%= label_tag(:rv, "Location:") %>
+    <%= text_field(:rv, :available_in) %>
+    <%= label_tag(:rv, "Rent from:") %>
+    <%= date_field(:rv, :available_from) %>
+    <%= label_tag(:rv, "Rent till:") %>
+    <%= date_field(:rv, :available_till) %>
+    <%= submit_tag("Search") %>
   <% end %>
-  </div>
 
-  <div class="container">
-      <div class='col-md-5'>
-          <div class="form-group">
-              <div class='input-group date' id='datetimepicker6'>
-                  <input type='text' class="form-control" />
-                  <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
-              </div>
-          </div>
-      </div>
-      <div class='col-md-5'>
-          <div class="form-group">
-              <div class='input-group date' id='datetimepicker7'>
-                  <input type='text' class="form-control" />
-                  <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
-              </div>
-          </div>
-      </div>
-  </div>
-  <script type="text/javascript">
-      $(function () {
-          $('#datetimepicker6').datetimepicker();
-          $('#datetimepicker7').datetimepicker({
-              useCurrent: false //Important! See issue #1075
-          });
-          $("#datetimepicker6").on("dp.change", function (e) {
-              $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-          });
-          $("#datetimepicker7").on("dp.change", function (e) {
-              $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-          });
-      });
-  </script>
 </div>
 

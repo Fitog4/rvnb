@@ -1,2 +1,13 @@
-<h1>Rvs#new</h1>
-<p>Find me in app/views/rvs/new.html.erb</p>
+<h1>Here you can add a RV</h1>
+
+<%= simple_form_for @rv do |f| %>
+  <%= f.input :category %>
+  <%= f.input :travelling_seats %>
+  <%= f.input :beds %>
+  <%= f.input :available_in %>
+  <%= f.input :available_from %>
+  <%= f.input :available_till %>
+  <%= f.input :price_per_night %>
+  <%= f.input :model %>
+  <%= f.submit "Add your RV", class: "btn btn-danger" %>
+<% end %>

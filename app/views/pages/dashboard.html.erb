@@ -1,3 +1,11 @@
+<ul class="list-inline tabs-underlined">
+  <li>
+    <a href="<%= dashboard_path %>" class="tab-underlined<% if current_page?(controller:"pages", action: "dashboard") %> active<% end %>">Pending</a>
+  </li>
+  <li>
+    <a href="<%= dashboard_previous_path %>" class="tab-underlined<% if current_page?(controller:"pages", action: "dashboard_previous") %> active<% end %>">Previous</a>
+  </li>
+</ul>
 <div class="wrapper">
   <% @booking_requests.each do |rv| %>
     <div class="card-booking">
@@ -15,4 +23,3 @@
     </div>
   <% end %>
 </div>
-

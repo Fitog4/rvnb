@@ -9,5 +9,4 @@ Rails.application.routes.draw do
   get 'rvs', to: 'rvs#search'
   devise_for :users
   resources :users, only: [ :show ]
-  resources :booking_requests, only: [:index]
 end

@@ -1,4 +1,4 @@
-<% if current_page?(controller:"pages", action: "home") %>
+<% if controller_name == "pages" && action_name == "home" %>
 <div class="navbar navbar-home">
   <%= link_to image_tag("rvnb_logo_white.png", alt: "rvnb_logo", width: 70, height: 70), root_path %>
 <% else %>
@@ -6,8 +6,8 @@
   <%= link_to image_tag("rvnb_logo_gray.png", alt: "rvnb_logo", width: 70, height: 70), root_path %>
 <% end %>
   <div class="right">
+    <%= link_to 'Sign in', new_user_session_path %>
     <%= link_to 'Sign up', new_user_registration_path %>
-    <%= link_to 'Your Booking Requests', booking_requests_path %>
-    <a href="">Help</a>
+    <%= link_to 'Your Booking Requests', dashboard_path %>
   </div>
 </div>

@@ -1,9 +1,6 @@
 class BookingRequestsController < ApplicationController
-  before_action :set_rv, except: [:index]
+  before_action :set_rv
 
-  def index
-
-  end
   def new
     @booking_request = BookingRequest.new
   end
@@ -30,6 +27,6 @@ class BookingRequestsController < ApplicationController
   end
 
   def booking_request_params
-    params.require(:booking_request).permit(:status, :location, :date_from, :date_till)
+    params.require(:booking_request).permit(:location, :date_from, :date_till)
   end
 end

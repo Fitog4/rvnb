@@ -1,8 +1,13 @@
+.wrapper {
+  margin: auto;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 15px;
+  border-radius: 4px;
 }
 
 .card-trip > img {
@@ -55,4 +60,73 @@ a.btn-card {
   position: absolute;
   right: 16px;
   top: -20px;
+}
+
+.card-booking {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 15px auto;
+  width: 700px;
+  border-radius: 4px;
+
+}
+
+.card-booking > img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-booking h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-booking p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-booking .card-booking-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-booking-infos .card-booking-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+a.btn-card-booking-accept {
+  color: #EFE9E7;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #42AF98;
+  transition: background 0.3s ease;
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  width: 100px;
+  text-align: center;
+}
+
+a.btn-card-booking-decline {
+  color: #EFE9E7;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #D34C50;
+  transition: background 0.3s ease;
+  position: absolute;
+  right: 16px;
+  top: 60px;
+  width: 100px;
+  text-align: center;
 }

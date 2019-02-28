@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @booking_requests = BookingRequest.all
 
   end
 

@@ -13,5 +13,4 @@ class PagesController < ApplicationController
   @booking_requests = BookingRequest.all.select { |request| request.date_till < Date.today }
   render :dashboard
   end
-
 end

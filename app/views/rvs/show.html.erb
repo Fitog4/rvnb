@@ -11,7 +11,8 @@
           <p><%= @rv.beds %></p>
         </div>
         <h2 class="card-trip-pricing"> <%= @rv.price_per_night %>€ per night</h2>
-        <a class="btn-card" href="#">Book now</a>
+        <%=link_to 'Book now', new_rv_booking_request_path(@rv), class: 'btn-card' %>
+        <%= link_to 'Go back', '/rvs' %>
       </div>
     </div>
 </div>

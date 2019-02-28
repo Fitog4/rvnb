@@ -3,10 +3,8 @@
       <%= image_tag "rvnb_logo_white.png", alt: "rvnb_logo", width: 70, height: 70 %>
     </a>
     <div class="right">
-      <a href="#">Help</a>
-      <a href="#">Sign up</a>
-      <a href="#">Sign in</a>
-      <a href="#">Your RV</a>
+      <%= link_to 'Sign up', new_user_registration_path %>
+      <a href="">Help</a>
+      <%= link_to 'Your Booking Requests', booking_requests_path %>
     </div>
-
 </div>

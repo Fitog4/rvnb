@@ -6,3 +6,20 @@
     <a href="<%= dashboard_previous_path %>" class="tab-underlined<% if current_page?(controller:"pages", action: "dashboard_previous") %> active<% end %>">Previous</a>
   </li>
 </ul>
+<div class="wrapper">
+  <% @booking_requests.each do |rv| %>
+    <div class="card-booking">
+      <img src="https://images.unsplash.com/photo-1493227553253-d7239ca0e825?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80">
+      <div class="card-booking-infos">
+        <div>
+          <h1> <%= rv.user.name %></h1>
+          <h2> Booking request from the <%= rv.date_from.to_date.to_s%> to the <%=rv.date_till.to_date.to_s %></h2>
+          <p>Location: <%= rv.location %></p>
+        </div>
+        <h2 class="card-booking-status"> Status: <%= rv.status %></h2>
+        <a class="btn-card-booking-accept btn-blue" href="#">Accept</a>
+        <a class="btn-card-booking-decline btn-red" href="#">Decline</a>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,4 +1,18 @@
-<h1>RV - <%= @rv.model %></h1>
-<h2>Price:<%= @rv.price_per_night %></h2>
-<h2>Category:<%= @rv.category %></h2>
+<h1>Here you can see the chosen RV</h1>
 
+<div class="container">
+    <div class="card-trip">
+      <img src="https://images.unsplash.com/photo-1520101244246-293f77ffc39e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80">
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @rv.category%> by <%= @rv.user.name %></h2>
+          <p><%= @rv.model %></p>
+          <p><%= @rv.travelling_seats %></p>
+          <p><%= @rv.beds %></p>
+        </div>
+        <h2 class="card-trip-pricing"> <%= @rv.price_per_night %>€ per night</h2>
+        <%=link_to 'Book now', new_rv_booking_request_path(@rv), class: 'btn-card' %>
+        <%= link_to 'Go back', '/rvs' %>
+      </div>
+    </div>
+</div>

@@ -1,2 +1,11 @@
-<h1>BookingRequests#show</h1>
-<p>Find me in app/views/booking_requests/show.html.erb</p>
+<h1>Thank you page</h1>
+<div class="container">
+  <ul>
+    <li><%= @booking_request.status %></li>
+    <li><%= @booking_request.location %></li>
+    <li><%= @booking_request.date_from %></li>
+    <li><%= @booking_request.date_till %></li>
+  </ul>
+</div>
+<%= link_to 'Back to homepage', '/' %>
+

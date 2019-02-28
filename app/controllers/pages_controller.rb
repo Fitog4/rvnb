@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+
   end
 
   def dashboard_previous

@@ -8,7 +8,8 @@
           <p>Description of the RV</p>
         </div>
         <h2 class="card-trip-pricing"> <%= rv.price_per_night %>€ per night</h2>
-        <a class="btn-card" href="#">Book now</a>
+        <%=link_to 'Book now', rv_path(rv), class: 'btn-card' %>
+        <%= link_to 'Back to homepage', '/' %>
       </div>
     </div>
   <% end %>

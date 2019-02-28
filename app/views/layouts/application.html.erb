@@ -10,7 +10,7 @@
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
 <body>
-  <% if current_page?(controller:"pages", action: "home") %>
+  <% if controller_name == "pages" && action_name == "home" %>
     <%= render "shared/navbar" %>
   <% else   %>
     <div class='content-body-with-margin'>

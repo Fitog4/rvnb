@@ -1,11 +1,28 @@
 .navbar {
   display: flex;
+  height: 80px;
   align-items: center;
   margin: 0px;
   justify-content: space-between;
-  background: transparent;
-  position: absolute;
+  position: sticky;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  border: none;
+  background-color: $light-gray;
+  a {
+  // color: #161925;
+  // opacity: 0.15;
+    color: #161925;
+    opacity: 0.15;
+    text-decoration: none;
+    &:hover {
+    opacity: 1;
+    }
   }
+}
 
 .navbar:after {
   content: none;
@@ -14,20 +31,18 @@
 .navbar:before {
   content: none;
 }
-.navbar a {
- text-decoration: none;
- color: #EFE9E7;
-}
 
-.navbar-transparent {
+.navbar-home {
+  position: absolute;
   background: transparent;
   box-shadow: 0 0 0 1px transparent;
-  border: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  padding: 15px;
+  a {
+    color: #EFE9E7;
+    opacity: 1;
+    &:hover {
+    opacity: 0.15;
+    }
+  }
 }
 
 .left {
@@ -43,6 +58,6 @@
 }
 
 .right a {
-  margin: 20px;
+  margin: 0 20px;
 }
 

@@ -10,17 +10,9 @@
   <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
 <body>
-  <% if controller_name == "pages" && action_name == "home" %>
-    <%= render "shared/navbar" %>
-  <% else   %>
-    <div class='content-body-with-margin'>
-      <%= render 'shared/navbar' %>
-    </div>
-  <% end  %>
-
+  <%= render "shared/navbar" %>
   <%= render "shared/flashes" %>
   <%= yield %>
-
   <%= render "shared/footer" %>
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>

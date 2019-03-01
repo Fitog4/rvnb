@@ -1,9 +1,14 @@
 #search_form {
   margin-top: 70px;
   display: flex;
+  width: 500px;
+  position: relative;
+  top: 150px;
+  left: 320px;
   #query {
     flex: 1;
     height: 40px;
+
   }
   #search_button {
     width: auto;

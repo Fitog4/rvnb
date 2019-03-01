@@ -1,9 +1,15 @@
 <ul class="list-inline tabs-underlined">
   <li>
-    <a href="<%= dashboard_path %>" class="tab-underlined<% if current_page?(controller:"pages", action: "dashboard") %> active<% end %>">Pending</a>
+    <a href="<%= dashboard_path %>" class="tab-underlined<% if current_page?(controller:"pages", action: "dashboard") %> active<% end %>">My pending requests</a>
   </li>
   <li>
-    <a href="<%= dashboard_previous_path %>" class="tab-underlined<% if current_page?(controller:"pages", action: "dashboard_previous") %> active<% end %>">Previous</a>
+    <a href="<%= dashboard_rv_requests_path %>" class="tab-underlined<% if current_page?(controller:"pages", action: "dashboard_rv_requests") %> active<% end %>">Pending requests for my RVs</a>
+  </li>
+  <li>
+    <a href="<%= dashboard_previous_path %>" class="tab-underlined<% if current_page?(controller:"pages", action: "dashboard_previous") %> active<% end %>">My previous requests</a>
+  </li>
+  <li>
+    <a href="<%= dashboard_rv_previous_requests_path %>" class="tab-underlined<% if current_page?(controller:"pages", action: "dashboard_prev_reqs_for_my_rvs") %> active<% end %>">Previous requests for my RVs</a>
   </li>
 </ul>
 <div class="global-wrapper">
@@ -17,8 +23,10 @@
           <p>Location: <%= rv.location %></p>
         </div>
         <h2 class="card-booking-status"> Status: <%= rv.status %></h2>
-        <a class="btn-card-booking-accept btn-blue" href="#">Accept</a>
-        <a class="btn-card-booking-decline btn-red" href="#">Decline</a>
+        <% if current_page?(controller:"pages", action: "dashboard_rv_requests") %>
+          <a class="btn-card-booking-accept btn-blue" href="#">Accept</a>
+          <a class="btn-card-booking-decline btn-red" href="#">Decline</a>
+        <% end %>
       </div>
     </div>
   <% end %>

@@ -1,4 +1,4 @@
-<h1 class="header1">Here's your chosen RV :</h1>
+<h2 class="header1">You chose this RV</h2>
 
 <div class="container">
   <div class="global-wrapper">
@@ -7,9 +7,9 @@
       <div class="card-trip-infos">
         <div>
           <h2><%= @rv.category%> by <%= @rv.user.name %></h2>
-          <p class="pcard"> model : <%= @rv.model %></p>
-          <p class="pcard"> number of seats: <%= @rv.travelling_seats %></p>
-          <p class="pcard"> number of beads: <%= @rv.beds %></p>
+          <p class="pcard"> Model: <%= @rv.model %></p>
+          <p class="pcard"> Number of seats: <%= @rv.travelling_seats %></p>
+          <p class="pcard"> Number of beads: <%= @rv.beds %></p>
         </div>
         <h2 class="card-trip-pricing"> <%= @rv.price_per_night %>€ per night</h2>
         <div>

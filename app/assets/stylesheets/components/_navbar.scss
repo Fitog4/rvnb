@@ -11,15 +11,16 @@
   top: 0;
   padding: 15px;
   border: none;
-  background-color: $light-gray;
+  background-color: #E2DFD5;
   a {
   // color: #161925;
   // opacity: 0.15;
     color: #161925;
-    opacity: 0.15;
+    opacity: 1;
     text-decoration: none;
     &:hover {
     opacity: 1;
+    color: #FF5B60;
     }
   }
 }
@@ -41,6 +42,7 @@
     opacity: 1;
     &:hover {
     opacity: 0.15;
+    color: #FF5B60;
     }
   }
 }

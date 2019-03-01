@@ -7,3 +7,11 @@
 @import "cards";
 @import "tabs";
 @import "headers&text";
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  position: relative;
+}

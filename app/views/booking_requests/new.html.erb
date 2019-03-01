@@ -1,9 +1,16 @@
-<h1>Create a Booking Requests</h1>
+<h1>Please insert your booking details</h1>
+<% if !@booking_request.errors.full_messages.empty? %>
 <%= @booking_request.errors.full_messages %>
+<% end %>
 
+<p class="pcard">The RV is available from: <%= @rv.available_from %></p>
+<p class="pcard">Till: <%= @rv.available_till %></p>
 <%= simple_form_for [@rv, @booking_request] do |f| %>
-  <%= f.input :date_from %>
-  <%= f.input :date_till %>
+  <%= label_tag(:booking_request, "Rent from:") %>
+  <input type="date" name="booking_request[date_from]" id="booking_request_date_from">
+  <%= label_tag(:booking_request, "Till:") %>
+  <%= date_field(:booking_request, :date_till) %>
+
   <%= f.submit "Submit", class: "btn btn-danger" %>
 <% end %>
 <%= link_to 'Go back', rv_path(@rv) %>

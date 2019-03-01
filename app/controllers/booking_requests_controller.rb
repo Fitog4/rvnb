@@ -3,6 +3,7 @@ class BookingRequestsController < ApplicationController
 
   def new
     @booking_request = BookingRequest.new
+    @rv = Rv.find(params[:rv_id])
   end
 
   def show

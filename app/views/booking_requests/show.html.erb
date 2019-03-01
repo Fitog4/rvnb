@@ -1,11 +1,25 @@
-<h1>Thank you page</h1>
 <div class="container">
-  <ul>
-    <li><%= @booking_request.status %></li>
-    <li><%= @booking_request.location %></li>
-    <li><%= @booking_request.date_from %></li>
-    <li><%= @booking_request.date_till %></li>
-  </ul>
+  <h1 class="header1">Thank you for using our website !</h1>
+  <h2 class="header2">Your booking recap : </h2>
+  <div class="global-wrapper">
+    <div class="card-trip" id="thank-card">
+      <div class="thankyouRV">
+        <img src="https://images.unsplash.com/photo-1550919555-01abf9422e48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" alt="van">
+      </div>
+      <ul>
+        <i class="far fa-user"></i>
+        <li> <b>Name</b> : <%= @booking_request.user.name %></li>
+        <i class="far fa-comment-dots"></i>
+        <li> <b>Booking status :</b>  <%= @booking_request.status %></li>
+        <i class="fas fa-map-marker-alt"></i>
+        <li> <b>Location :</b> <%= @booking_request.location %></li>
+        <i class="fas fa-play-circle"></i>
+        <li> <b>From: </b> <%= @booking_request.date_from.to_date %></li>
+        <i class="fas fa-stop-circle"></i>
+        <li> <b>Till: </b> <%= @booking_request.date_till.to_date %></li>
+      </ul>
+    </div>
+  </div>
 </div>
-<%= link_to 'Back to homepage', '/' %>
+<p> <%= link_to 'Back to homepage', '/' %></p>
 

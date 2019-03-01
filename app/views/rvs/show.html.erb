@@ -1,18 +1,20 @@
-<h1>Here you can see the chosen RV</h1>
+<h1 class="header1">Here's your chosen RV :</h1>
 
 <div class="container">
+  <div class="global-wrapper">
     <div class="card-trip">
       <img src="https://images.unsplash.com/photo-1520101244246-293f77ffc39e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80">
       <div class="card-trip-infos">
         <div>
           <h2><%= @rv.category%> by <%= @rv.user.name %></h2>
-          <p><%= @rv.model %></p>
-          <p><%= @rv.travelling_seats %></p>
-          <p><%= @rv.beds %></p>
+          <p class="pcard"> model : <%= @rv.model %></p>
+          <p class="pcard"> number of seats: <%= @rv.travelling_seats %></p>
+          <p class="pcard"> number of beads: <%= @rv.beds %></p>
         </div>
         <h2 class="card-trip-pricing"> <%= @rv.price_per_night %>€ per night</h2>
         <%=link_to 'Book now', new_rv_booking_request_path(@rv), class: 'btn-card' %>
         <%= link_to 'Go back', '/rvs' %>
       </div>
     </div>
+  </div>
 </div>

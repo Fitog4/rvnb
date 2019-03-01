@@ -19,16 +19,16 @@ class RvsController < ApplicationController
 
   def search
     @searched_location = params[:query]
-    @rvs = Rv.where(available_in: params[:query])
+    @rvs = Rv.near(params[:query], 300)
   end
 
   def filter_by_date
     if rv_search_params[:available_till].present?
-      @rvs = Rv.where(available_in: params[:searched_location]).where('available_till >= ?', rv_search_params[:available_till])
+      @rvs = Rv.near(params[:searched_location], 300).where('available_till >= ?', rv_search_params[:available_till])
     end
 
     if rv_search_params[:available_from].present?
-      @rvs = @rvs.where('available_from <= ?', rv_search_params[:available_from])
+      @rvs = Rv.near(params[:searched_location], 300).where('available_from <= ?', rv_search_params[:available_from])
     end
     render :search
   end

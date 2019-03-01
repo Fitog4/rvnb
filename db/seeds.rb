@@ -12,7 +12,7 @@ User.destroy_all
 
 puts 'Everything is destroyed!'
 
-puts 'Creating 100 fake users...'
+puts 'Creating 200 fake users...'
 100.times do
   user = User.new(
     email: Faker::Internet.email,
@@ -23,7 +23,7 @@ puts 'Creating 100 fake users...'
 end
 puts 'Finished!'
 
-puts 'Creating 100 fake RVs...'
+puts 'Creating 200 fake RVs...'
 100.times do
   rv = Rv.new(
     category: ['Motorhome', 'Toterhome', 'Diesel Pusher', 'Travel Trailer', 'Expandable Travel Trailer', '5th Wheel RV', 'Toy Hauler' 'Camper', 'Van', 'Teardrop Trailer', 'Horse Trailer', 'Ice Fishing RV
@@ -31,7 +31,8 @@ puts 'Creating 100 fake RVs...'
     user: User.all.sample,
     travelling_seats: rand(2..8),
     beds: rand(2..8),
-    available_in: ['Europe', 'Asia', 'North America', 'Latin America', 'Australia', 'Africa'].sample,
+    available_in: Faker::Address.city,
+    #['Europe', 'Asia', 'North America', 'Latin America', 'Australia', 'Africa'].sample,
     available_from: Faker::Date.between('2019-03-01', '2019-05-01'),
     available_till: Faker::Date.between('2019-05-01', '2019-12-01'),
     price_per_night: rand(35..200),
@@ -41,11 +42,12 @@ puts 'Creating 100 fake RVs...'
 end
 puts 'Finished!'
 
-puts 'Creating 100 fake booking requests...'
+puts 'Creating 200 fake booking requests...'
 100.times do
   booking_request = BookingRequest.new(
     status: ['pending', 'approved', 'paid'].sample,
-    location: ['Europe', 'Asia', 'North America', 'Latin America', 'Australia', 'Africa'].sample,
+    location: Faker::Address.city,
+    #['Europe', 'Asia', 'North America', 'Latin America', 'Australia', 'Africa'].sample,
     date_from: Faker::Date.between('2019-03-01', '2019-05-01'),
     date_till: Faker::Date.between('2019-05-01', '2019-12-01'),
     user: User.all.sample,

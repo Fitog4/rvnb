@@ -15,7 +15,8 @@
         <div class="card-trip-infos">
           <div>
             <h2><%= rv.category%> by <%=rv.user.name %></h2>
-            <p>Description of the RV</p>
+            <p class="pcard">Located in <%= rv.available_in%></p>
+            <p class="pcard">This RV is well suited for the Road</p>
           </div>
           <h2 class="card-trip-pricing"> <%= rv.price_per_night %>€ per night</h2>
           <%=link_to 'Book now', rv_path(rv), class: 'btn-red show-rv-results' %>

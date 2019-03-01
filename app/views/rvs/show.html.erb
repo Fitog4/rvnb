@@ -7,9 +7,12 @@
       <div class="card-trip-infos">
         <div>
           <h2><%= @rv.category%> by <%= @rv.user.name %></h2>
-          <p class="pcard"> Model: <%= @rv.model %></p>
+
+          <p class="pcard"> Located in <%= @rv.available_in%></p>
+          <p class="pcard"> Model : <%= @rv.model %></p>
           <p class="pcard"> Number of seats: <%= @rv.travelling_seats %></p>
           <p class="pcard"> Number of beads: <%= @rv.beds %></p>
+
         </div>
         <h2 class="card-trip-pricing"> <%= @rv.price_per_night %>€ per night</h2>
         <div>

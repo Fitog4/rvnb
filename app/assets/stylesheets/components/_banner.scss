@@ -6,6 +6,7 @@
   padding: 150px 0;
   height: calc(100vh - 100px);
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('banner-image.jpeg');
+
 }
 
 .banner h1  {
@@ -16,6 +17,8 @@
   font-weight: 100px;
   text-align: center;
   font-family: Open Sans;
+  position: relative;
+  top: 0px;
 }
 
 .banner p {
@@ -27,4 +30,6 @@
   text-align: center;
   font-family: Open Sans;
   margin-top:25px;
+  position: relative;
+  top: 15px;
 }

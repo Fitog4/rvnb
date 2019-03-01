@@ -4,7 +4,7 @@
       <input type="hidden" value="<%= @searched_location %>" name="searched_location" >
       <%= label_tag(:rv, "Rent from:") %>
       <%= date_field(:rv, :available_from) %>
-      <%= label_tag(:rv, "Rent till:") %>
+      <%= label_tag(:rv, "Rent until:") %>
       <%= date_field(:rv, :available_till) %>
       <%= submit_tag("Filter") %>
     <% end %>

@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'geocoder'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'

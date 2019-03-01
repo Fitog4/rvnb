@@ -13,8 +13,10 @@
           <p class="pcard"> number of beads: <%= @rv.beds %></p>
         </div>
         <h2 class="card-trip-pricing"> <%= @rv.price_per_night %>€ per night</h2>
-        <%=link_to 'Book now', new_rv_booking_request_path(@rv), class: 'btn-card' %>
-        <%= link_to 'Go back', '/rvs' %>
+        <div>
+          <%=link_to 'Book now', new_rv_booking_request_path(@rv), class: 'btn-red show-rv' %>
+          <%= link_to 'Go back', '/rvs', class: 'go-back' %>
+        </div>
       </div>
     </div>
   </div>

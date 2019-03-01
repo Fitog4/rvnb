@@ -15,7 +15,7 @@
   align-items: center;
 }
 .footer-links a {
-  color: #161925;
+  color: white;
   opacity: 1;
   text-decoration: none;
   font-size: 24px;
@@ -27,6 +27,9 @@
   color: #FF5B60;
 }
 .footer .fa-heart {
+  color: white;
+}
+.footer .fa-heart:hover {
   color: #FF5B60;
 }
 

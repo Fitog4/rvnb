@@ -11,6 +11,7 @@ class BookingRequestsController < ApplicationController
 
   def create
     @booking_request = BookingRequest.new(booking_request_params)
+    @booking_request.location = @rv.available_in
     @booking_request.rv = @rv
     @booking_request.user = current_user
     if @booking_request.save
@@ -27,6 +28,6 @@ class BookingRequestsController < ApplicationController
   end
 
   def booking_request_params
-    params.require(:booking_request).permit(:location, :date_from, :date_till)
+    params.require(:booking_request).permit(:date_from, :date_till)
   end
 end

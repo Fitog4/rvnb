@@ -6,11 +6,13 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-  @booking_requests = BookingRequest.all.select { |request| request.date_till >= Date.today }
+     user_booking = BookingRequest.where(user: current_user)
+     @booking_requests = user_booking.select { |request| request.date_till >= Date.today }
   end
 
   def dashboard_previous
-  @booking_requests = BookingRequest.all.select { |request| request.date_till < Date.today }
-  render :dashboard
+   user_booking = BookingRequest.where(user: current_user)
+     @booking_requests = user_booking.select { |request| request.date_till < Date.today }
+     render :dashboard
   end
 end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'dashboard', to: 'pages#dashboard', as: 'dashboard'
   get 'dashboard_previous', to: 'pages#dashboard_previous', as: 'dashboard_previous'
+  get 'rvs/filter', to: 'rvs#filter_by_date'
   resources :rvs, only: [ :new, :create, :show, ] do
     resources :booking_requests, only: [ :new, :show, :create ]
   end

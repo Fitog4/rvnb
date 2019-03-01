@@ -1,4 +1,4 @@
-a.btn-red {
+.btn-red {
   color: #EFE9E7;
   padding: 8px 24px;
   border-radius: 4px;
@@ -8,19 +8,19 @@ a.btn-red {
 
 }
 
-a.btn-red:hover {
+.btn-red:hover {
   background: #F4585D;
   color: #EFE9E7;
   text-decoration: none;
 }
 
-a.btn-red:active {
+.btn-red:active {
   background: #F4585D;
   color: #EFE9E7;
   text-decoration: none;
 }
 
-a.btn-blue {
+.btn-blue {
   color: #EFE9E7;
   padding: 8px 24px;
   border-radius: 4px;
@@ -29,16 +29,20 @@ a.btn-blue {
   text-decoration: none;
 }
 
-a.btn-blue:hover {
+.btn-blue:hover {
   background: #5195E8;
   color: #EFE9E7;
   text-decoration: none;
 }
 
-a.btn-blue:active {
+.btn-blue:active {
   background: #5195E8;
   color: #EFE9E7;
   text-decoration: none;
 }
 
+#search_button {
+  width: 70px;
+  height: 40px;
+}
 

@@ -1,4 +1,16 @@
 <div class="container">
+
+  <%= form_tag("/rvs/filter", method: "get") do %>
+      <% hidden_field_tag(:searched_location, @searched_location) %>
+      <input type="hidden" value="<%= @searched_location %>" name="searched_location">
+      <%= label_tag(:rv, "Rent from:") %>
+      <%= date_field(:rv, :available_from) %>
+      <%= label_tag(:rv, "Rent till:") %>
+      <%= date_field(:rv, :available_till) %>
+      <%= submit_tag("Filter") %>
+  <% end %>
+
+
   <% @rvs.each do |rv| %>
     <div class="card-trip">
       <img src="https://images.unsplash.com/photo-1520101244246-293f77ffc39e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80">

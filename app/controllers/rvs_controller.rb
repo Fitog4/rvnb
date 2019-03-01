@@ -18,8 +18,7 @@ class RvsController < ApplicationController
   end
 
   def search
-    @rvs = Rv.where(available_in: rv_search_params[:available_in])
-      .where('available_till >= ?', rv_search_params[:available_till]).where('available_from <= ?', rv_search_params[:available_from])
+    @rvs = Rv.near(rv_search_params[:available_in], 300).where('available_till >= ?', rv_search_params[:available_till]).where('available_from <= ?', rv_search_params[:available_from])
   end
 
   private

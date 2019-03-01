@@ -2,7 +2,6 @@
 <%= @booking_request.errors.full_messages %>
 
 <%= simple_form_for [@rv, @booking_request] do |f| %>
-  <%= f.input :location %>
   <%= f.input :date_from %>
   <%= f.input :date_till %>
   <%= f.submit "Submit", class: "btn btn-danger" %>

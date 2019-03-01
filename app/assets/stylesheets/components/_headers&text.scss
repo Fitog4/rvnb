@@ -1,8 +1,8 @@
 .header1 {
   text-align : center;
-  font-family: Helvetica Neue, sans-serif;
+  // font-family: Helvetica Neue, sans-serif;
   text-color: #161925;
-  font-weight: 20px;
+  font-weight: 100px;
 }
 
 .header2 {
@@ -21,4 +21,9 @@ p {
 .pcard {
 
   text-align: left;
+}
+
+.datepicker {
+  margin-top: 15px !important;
+  text-align: center;
 }

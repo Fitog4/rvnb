@@ -1,5 +1,6 @@
 <div class="container">
-  <% @rvs.each do |rv| %>
+  <div class="global-wrapper">
+    <% @rvs.each do |rv| %>
     <div class="card-trip">
       <img src="https://images.unsplash.com/photo-1520101244246-293f77ffc39e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80">
       <div class="card-trip-infos">
@@ -12,5 +13,6 @@
         <%= link_to 'Back to homepage', '/' %>
       </div>
     </div>
+  </div>
   <% end %>
 </div>
